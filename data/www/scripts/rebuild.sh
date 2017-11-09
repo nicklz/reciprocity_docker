@@ -34,3 +34,4 @@ cd /var/www/project/reciprocity/web/sites/default && drush updb -y
 cd /var/www/project/reciprocity/web/sites/default && drush cr -y
 cd /var/www/project/reciprocity/web/sites/default && drush cim -y
 cd /var/www/project/reciprocity/web/sites/default && drush cr -y
+cd /var/www/project/reciprocity/web/sites/default && drush entup

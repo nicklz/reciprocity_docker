@@ -64,7 +64,7 @@ git config --global core.filemode false && cd /var/www/project/reciprocity && gi
 
 
 
-#cd /var/www/project/reciprocity/docroot && sudo -u docker composer install --no-interaction --no-dev --prefer-dist
+#cd /var/www/project/reciprocity/web && sudo -u docker composer install --no-interaction --no-dev --prefer-dist
 
 
 echo "COMPOSER === "
@@ -72,13 +72,13 @@ echo "=========="
 cd /var/www/project/reciprocity && composer install
 
 
-#cp -rf /var/www/local.reciprocity.org  /var/www/project/reciprocity/docroot/sites/
-cp -rf /var/www/local.reciprocity.org/settings.php  /var/www/project/reciprocity/web/sites/default/settings.local.php
+#cp -rf /var/www/local.reciprocity.edu  /var/www/project/reciprocity/web/sites/
+cp -rf /var/www/local.reciprocity.edu/settings.php  /var/www/project/reciprocity/web/sites/default/settings.local.php
 
 
 
 echo "DRUPAL UPDATE === "
 echo "=========="
-cd /var/www/project/reciprocity/docroot/sites/default && drush updb -y
-cd /var/www/project/reciprocity/docroot/sites/default && drush cr -y
-cd /var/www/project/reciprocity/docroot/sites/default && drush cim
+cd /var/www/project/reciprocity/web/sites/default && drush updb -y
+cd /var/www/project/reciprocity/web/sites/default && drush cr -y
+cd /var/www/project/reciprocity/web/sites/default && drush cim

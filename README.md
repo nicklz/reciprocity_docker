@@ -8,4 +8,4 @@
 6. ./scripts/setup.sh
 
 
-7. Visit http://local.reciprocity.org:10081
+7. Visit http://local.reciprocity.edu:10081

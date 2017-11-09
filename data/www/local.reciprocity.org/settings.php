@@ -727,3 +727,6 @@ $databases['default']['default'] = array (
 
 //$settings['install_profile'] = 'standard';
 //$config_directories['sync'] = '../config/prod';
+
+
+$settings['trusted_host_patterns'][] = '^local.reciprocity\.(com|org|edu|info|lndo\.site)$';
