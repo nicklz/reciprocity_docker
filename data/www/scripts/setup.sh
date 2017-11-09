@@ -73,7 +73,7 @@ cd /var/www/project/reciprocity && composer install
 
 
 #cp -rf /var/www/local.reciprocity.org  /var/www/project/reciprocity/docroot/sites/
-cp -rf /var/www/local.reciprocity.org/settings.php  /var/www/project/reciprocity/docroot/sites/default/settings.php
+cp -rf /var/www/local.reciprocity.org/settings.php  /var/www/project/reciprocity/web/sites/default/settings.local.php
 
 
 

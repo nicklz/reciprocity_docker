@@ -21,4 +21,4 @@ mysql -u root -h mysql -p reciprocity --password="" < /var/www/dump.sql
 
 echo "RUN DRUSH"
 echo "=================="
-cd /var/www/project/reciprocity/docroot/sites/default && drush cr && drush updb -y
+cd /var/www/project/reciprocity/web/sites/default && drush cr && drush updb -y
