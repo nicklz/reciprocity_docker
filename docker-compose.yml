@@ -24,7 +24,7 @@ services:
   web:
     container_name: reciprocity_web
     # keopx/apache-php available tags: latest, 7.1, 7.0, 5.6.
-    image: keopx/apache-php:5.6
+    image: keopx/apache-php:7.1
     ports:
       # 8008 works without varnish.
       - "10083:80"
