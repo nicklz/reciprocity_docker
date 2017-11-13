@@ -43,7 +43,7 @@ cd /var/ && git config --global core.filemode
 
 mkdir /var/www/project
 
-cd /var/www/project && git clone git@github.com:UCEAP-IT/uceap-reciprocity.git reciprocity
+cd /var/www/project && git clone --recursive git@github.com:UCEAP-IT/uceap-reciprocity.git reciprocity
 
 chmod -R 777 /var/www/project/reciprocity
 
