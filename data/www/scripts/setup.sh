@@ -31,19 +31,6 @@ ssh-keyscan -H git.reciprocity.org  >> ~/.ssh/known_hosts
 ssh-keyscan -H reciprocity.org  >> ~/.ssh/known_hosts
 
 
-## MySQL
-echo "drop database reciprocity;" | mysql -uroot -h mysql
-echo "create database reciprocity;" | mysql -uroot -h mysql
-
-
-
-
-echo "SYNC DATABASE"
-echo "=================="
-
-mysql -u root -h mysql -p reciprocity --password="" < /var/www/dump.sql
-
-
 
 
 echo "GIT === "
@@ -74,6 +61,19 @@ cd /var/www/project/reciprocity && composer install
 
 #cp -rf /var/www/local.reciprocity.edu  /var/www/project/reciprocity/web/sites/
 cp -rf /var/www/local.reciprocity.edu/settings.php  /var/www/project/reciprocity/web/sites/default/settings.local.php
+
+
+## MySQL
+echo "drop database reciprocity;" | mysql -uroot -h mysql
+echo "create database reciprocity;" | mysql -uroot -h mysql
+
+
+
+
+echo "SYNC DATABASE"
+echo "=================="
+cp /var/www/project/reciprocity/build/bootstrap.sql /var/www/dump.sql
+mysql -u root -h mysql -p reciprocity --password="" < /var/www/dump.sql
 
 
 
