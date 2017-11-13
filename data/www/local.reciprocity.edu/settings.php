@@ -730,3 +730,5 @@ $databases['default']['default'] = array (
 
 
 $settings['trusted_host_patterns'][] = '^local.reciprocity\.(com|org|edu|info|lndo\.site)$';
+
+$config['system.file']['path']['temporary'] = '/tmp';
