@@ -11,8 +11,8 @@ echo "create database reciprocity;" | mysql -uroot -h mysql
 echo "SYNC DATABASE"
 echo "=================="
 
-drush @pantheon.uceap-reciprocity.qa sql-dump | mysql -u root -h mysql -p reciprocity
-mysqldump -u root -h mysql -p reciprocity > /var/www/dump.sql
+drush @pantheon.uceap-reciprocity.qa sql-dump | mysql -u root -h mysql -p reciprocity --password=""
+mysqldump -u root -h mysql --password=""  reciprocity > /var/www/dump.sql
 
 
 
