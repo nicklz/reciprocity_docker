@@ -29,6 +29,9 @@ ssh-keyscan -H bitbucket.org  >> ~/.ssh/known_hosts
 ssh-keyscan -H drush.in  >> ~/.ssh/known_hosts
 ssh-keyscan -H git.reciprocity.org  >> ~/.ssh/known_hosts
 ssh-keyscan -H reciprocity.org  >> ~/.ssh/known_hosts
+ssh-keyscan -H ci-406-uceap-reciprocity.pantheonsite.io  >> ~/.ssh/known_hosts
+ssh-keyscan -H pantheonsite.io  >> ~/.ssh/known_hosts
+
 
 
 
@@ -44,6 +47,11 @@ cd /var/ && git config --global core.filemode
 mkdir /var/www/project
 
 cd /var/www/project && git clone --recursive git@github.com:UCEAP-IT/uceap-reciprocity.git reciprocity
+
+cd /var/www/project/reciprocity && git config --global user.email "nicklz22@yahoo.com"
+cd /var/www/project/reciprocity && git config --global user.name "Nick Kuhn"
+cd /var/www/project/reciprocity && git config --global core.editor "vim"
+cd /var/www/project/reciprocity && git config --global core.filemode
 
 chmod -R 777 /var/www/project/reciprocity
 
@@ -61,6 +69,8 @@ cd /var/www/project/reciprocity && composer install
 
 #cp -rf /var/www/local.reciprocity.edu  /var/www/project/reciprocity/web/sites/
 cp -rf /var/www/local.reciprocity.edu/settings.php  /var/www/project/reciprocity/web/sites/default/settings.local.php
+
+cp /var/www/pantheon.aliases.drushrc.php  /root/.drush/
 
 
 ## MySQL
