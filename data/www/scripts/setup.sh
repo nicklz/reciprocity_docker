@@ -31,6 +31,9 @@ ssh-keyscan -H git.reciprocity.org  >> ~/.ssh/known_hosts
 ssh-keyscan -H reciprocity.org  >> ~/.ssh/known_hosts
 ssh-keyscan -H ci-406-uceap-reciprocity.pantheonsite.io  >> ~/.ssh/known_hosts
 ssh-keyscan -H pantheonsite.io  >> ~/.ssh/known_hosts
+ssh-keyscan -H codeserver.dev.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in  >> ~/.ssh/known_hosts
+ssh-keyscan -H codeserver.dev.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in:2222  >> ~/.ssh/known_hosts
+
 
 
 
@@ -47,6 +50,8 @@ cd /var/ && git config --global core.filemode
 mkdir /var/www/project
 
 cd /var/www/project && git clone --recursive git@github.com:UCEAP-IT/uceap-reciprocity.git reciprocity
+
+cd /var/www/project  && git clone ssh://codeserver.dev.124a2a40-4bd3-440e-950c-e2302f8952bf@codeserver.dev.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in:2222/~/repository.git reciprocity
 
 cd /var/www/project/reciprocity && git config --global user.email "nicklz22@yahoo.com"
 cd /var/www/project/reciprocity && git config --global user.name "Nick Kuhn"
