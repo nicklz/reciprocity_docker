@@ -46,7 +46,7 @@ cd /var/ && git config --global user.name "Nick Kuhn"
 cd /var/ && git config --global core.editor "vim"
 cd /var/ && git config --global core.filemode
 
-
+rm -rf /var/www/project
 mkdir /var/www/project
 
 cd /var/www/project && git clone --recursive git@github.com:UCEAP-IT/uceap-reciprocity.git reciprocity
