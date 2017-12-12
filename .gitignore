@@ -1,5 +1,8 @@
 .vagrant
-
+data/www/composer.json
+data/www/composer.lock
+data/www/installer.phar
+data/www/vendor
 .idea
 
 .DS_Store

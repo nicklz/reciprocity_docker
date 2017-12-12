@@ -49,7 +49,7 @@ cd /var/ && git config --global core.filemode
 rm -rf /var/www/project
 mkdir /var/www/project
 
-cd /var/www/project && git clone --recursive git@github.com:UCEAP-IT/uceap-reciprocity.git reciprocity
+#cd /var/www/project && git clone --recursive git@github.com:UCEAP-IT/uceap-reciprocity.git reciprocity
 
 cd /var/www/project  && git clone ssh://codeserver.dev.124a2a40-4bd3-440e-950c-e2302f8952bf@codeserver.dev.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in:2222/~/repository.git reciprocity
 
@@ -97,3 +97,11 @@ echo "=========="
 cd /var/www/project/reciprocity/web/sites/default && drush updb -y
 cd /var/www/project/reciprocity/web/sites/default && drush cr -y
 cd /var/www/project/reciprocity/web/sites/default && drush cim
+
+
+
+echo "TERMINUS === " 
+curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
+terminus auth:login --machine-token=Luj0ZyOzw3X0dzRCNeILlNCzLjfFeg79Gmx1hwPhEzCxy
+
+
