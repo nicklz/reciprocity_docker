@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-terminus multidev:create uceap-reciprocity.qa rws-$1
+if [[ $1 -eq 0 ]] ; then
+	    echo 'ERROR: missing ticket number'
+	    exit 1
+fi
+terminus multidev:delete -y uceap-reciprocity.rws-$1
+terminus multidev:create -y uceap-reciprocity.qa rws-$1
 terminus remote:drush uceap-reciprocity.rws-$1 --  recd
 
 echo "-----------------------------------------------"
