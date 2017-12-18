@@ -23,3 +23,5 @@ mysql -u root -h mysql -p reciprocity --password="" < /var/www/dump.sql
 
 cd /var/www/project/reciprocity && composer install
 cd /var/www/project/reciprocity/web/sites/default && drush updb -y && drush cim -y && drush entup -y && drush cr
+cd /var/www/project/reciprocity/web/sites/default && drush updb -y && drush cim -y && drush entup -y && drush cr
+
