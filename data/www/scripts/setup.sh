@@ -11,8 +11,7 @@ useradd -m docker
 usermod -G root docker
 
 mkdir ~/.ssh
-cp -rf /var/www/id_rsa ~/.ssh/id_rsa
-chmod 400 ~/.ssh/id_rsa
+cp -rf /var/www/id_rsa ~/.ssh/id_rsa && chmod 400 ~/.ssh/id_rsa
 
 mkdir /home/docker/.ssh
 cp -rf /var/www/id_rsa /home/docker/.ssh/id_rsa
@@ -87,7 +86,7 @@ echo "create database reciprocity;" | mysql -uroot -h mysql
 
 echo "SYNC DATABASE"
 echo "=================="
-cp /var/www/project/reciprocity/build/bootstrap.sql /var/www/dump.sql
+#cp /var/www/project/reciprocity/build/bootstrap.sql /var/www/dump.sql
 mysql -u root -h mysql -p reciprocity --password="" < /var/www/dump.sql
 
 

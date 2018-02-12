@@ -12,12 +12,24 @@
    * See http://helpdesk.getpantheon.com/customer/portal/articles/411388 for details.
    */
 
-  $aliases['uceap-reciprocity.pr-sub-them'] = array(
-    'uri' => 'pr-sub-them-uceap-reciprocity.pantheonsite.io',
-    'db-url' => 'mysql://pantheon:7a4992c4f5e84e198642ab97698f9ae1@dbserver.pr-sub-them.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in:12077/pantheon',
+  $aliases['uceap-reciprocity.rws-480'] = array(
+    'uri' => 'rws-480-uceap-reciprocity.pantheonsite.io',
+    'db-url' => 'mysql://pantheon:fc0d5d4fee3b47acac593950e8736dd7@dbserver.rws-480.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in:14677/pantheon',
     'db-allows-remote' => TRUE,
-    'remote-host' => 'appserver.pr-sub-them.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in',
-    'remote-user' => 'pr-sub-them.124a2a40-4bd3-440e-950c-e2302f8952bf',
+    'remote-host' => 'appserver.rws-480.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in',
+    'remote-user' => 'rws-480.124a2a40-4bd3-440e-950c-e2302f8952bf',
+    'ssh-options' => '-p 2222 -o "AddressFamily inet"',
+    'path-aliases' => array(
+      '%files' => 'code/sites/default/files',
+      '%drush-script' => 'drush',
+     ),
+  );
+  $aliases['uceap-reciprocity.rws-492'] = array(
+    'uri' => 'rws-492-uceap-reciprocity.pantheonsite.io',
+    'db-url' => 'mysql://pantheon:8bb7686ef28f45fd9e942b9525ead753@dbserver.rws-492.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in:15176/pantheon',
+    'db-allows-remote' => TRUE,
+    'remote-host' => 'appserver.rws-492.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in',
+    'remote-user' => 'rws-492.124a2a40-4bd3-440e-950c-e2302f8952bf',
     'ssh-options' => '-p 2222 -o "AddressFamily inet"',
     'path-aliases' => array(
       '%files' => 'code/sites/default/files',
@@ -36,18 +48,6 @@
       '%drush-script' => 'drush',
      ),
   );
-  $aliases['uceap-reciprocity.pr-rws-263'] = array(
-    'uri' => 'pr-rws-263-uceap-reciprocity.pantheonsite.io',
-    'db-url' => 'mysql://pantheon:82f3350ccb474d17bc87a9367433ab69@dbserver.pr-rws-263.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in:12576/pantheon',
-    'db-allows-remote' => TRUE,
-    'remote-host' => 'appserver.pr-rws-263.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in',
-    'remote-user' => 'pr-rws-263.124a2a40-4bd3-440e-950c-e2302f8952bf',
-    'ssh-options' => '-p 2222 -o "AddressFamily inet"',
-    'path-aliases' => array(
-      '%files' => 'code/sites/default/files',
-      '%drush-script' => 'drush',
-     ),
-  );
   $aliases['uceap-reciprocity.dev'] = array(
     'uri' => 'dev-uceap-reciprocity.pantheonsite.io',
     'db-url' => 'mysql://pantheon:e3289a22dbdc474cadcb79626d44bf11@dbserver.dev.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in:14634/pantheon',
@@ -60,36 +60,24 @@
       '%drush-script' => 'drush',
      ),
   );
+  $aliases['uceap-reciprocity.rws-493'] = array(
+    'uri' => 'rws-493-uceap-reciprocity.pantheonsite.io',
+    'db-url' => 'mysql://pantheon:e16b924917b447529c080fbec65a3a12@dbserver.rws-493.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in:14255/pantheon',
+    'db-allows-remote' => TRUE,
+    'remote-host' => 'appserver.rws-493.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in',
+    'remote-user' => 'rws-493.124a2a40-4bd3-440e-950c-e2302f8952bf',
+    'ssh-options' => '-p 2222 -o "AddressFamily inet"',
+    'path-aliases' => array(
+      '%files' => 'code/sites/default/files',
+      '%drush-script' => 'drush',
+     ),
+  );
   $aliases['uceap-reciprocity.test'] = array(
     'uri' => 'test-uceap-reciprocity.pantheonsite.io',
-    'db-url' => 'mysql://pantheon:fe9f9caf09a84e0c967425bd5cb1ae2e@dbserver.test.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in:11660/pantheon',
+    'db-url' => 'mysql://pantheon:4b9e2adca9c847c4a2602b25b99b8716@dbserver.test.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in:13300/pantheon',
     'db-allows-remote' => TRUE,
     'remote-host' => 'appserver.test.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in',
     'remote-user' => 'test.124a2a40-4bd3-440e-950c-e2302f8952bf',
-    'ssh-options' => '-p 2222 -o "AddressFamily inet"',
-    'path-aliases' => array(
-      '%files' => 'code/sites/default/files',
-      '%drush-script' => 'drush',
-     ),
-  );
-  $aliases['uceap-reciprocity.ci-406'] = array(
-    'uri' => 'ci-406-uceap-reciprocity.pantheonsite.io',
-    'db-url' => 'mysql://pantheon:4e85e833fdcd4a9cbfcbe43756c40407@dbserver.ci-406.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in:11801/pantheon',
-    'db-allows-remote' => TRUE,
-    'remote-host' => 'appserver.ci-406.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in',
-    'remote-user' => 'ci-406.124a2a40-4bd3-440e-950c-e2302f8952bf',
-    'ssh-options' => '-p 2222 -o "AddressFamily inet"',
-    'path-aliases' => array(
-      '%files' => 'code/sites/default/files',
-      '%drush-script' => 'drush',
-     ),
-  );
-  $aliases['uceap-reciprocity.rwsdemo'] = array(
-    'uri' => 'rwsdemo-uceap-reciprocity.pantheonsite.io',
-    'db-url' => 'mysql://pantheon:9cf9f94a5cb9476999316f4708b6a7a0@dbserver.rwsdemo.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in:11083/pantheon',
-    'db-allows-remote' => TRUE,
-    'remote-host' => 'appserver.rwsdemo.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in',
-    'remote-user' => 'rwsdemo.124a2a40-4bd3-440e-950c-e2302f8952bf',
     'ssh-options' => '-p 2222 -o "AddressFamily inet"',
     'path-aliases' => array(
       '%files' => 'code/sites/default/files',
@@ -108,12 +96,12 @@
       '%drush-script' => 'drush',
      ),
   );
-  $aliases['uceap-reciprocity.rws-49'] = array(
-    'uri' => 'rws-49-uceap-reciprocity.pantheonsite.io',
-    'db-url' => 'mysql://pantheon:1d87719ac15d419f8335a8872694a43a@dbserver.rws-49.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in:11130/pantheon',
+  $aliases['uceap-reciprocity.demo'] = array(
+    'uri' => 'demo-uceap-reciprocity.pantheonsite.io',
+    'db-url' => 'mysql://pantheon:96b3b10fbac8466a95e0e8c59142b9ae@dbserver.demo.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in:14515/pantheon',
     'db-allows-remote' => TRUE,
-    'remote-host' => 'appserver.rws-49.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in',
-    'remote-user' => 'rws-49.124a2a40-4bd3-440e-950c-e2302f8952bf',
+    'remote-host' => 'appserver.demo.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in',
+    'remote-user' => 'demo.124a2a40-4bd3-440e-950c-e2302f8952bf',
     'ssh-options' => '-p 2222 -o "AddressFamily inet"',
     'path-aliases' => array(
       '%files' => 'code/sites/default/files',
@@ -132,24 +120,12 @@
       '%drush-script' => 'drush',
      ),
   );
-  $aliases['uceap-reciprocity.pr-rws-327'] = array(
-    'uri' => 'pr-rws-327-uceap-reciprocity.pantheonsite.io',
-    'db-url' => 'mysql://pantheon:4fd5e6a39f5349c691deb6cf917be986@dbserver.pr-rws-327.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in:16979/pantheon',
+  $aliases['uceap-reciprocity.rws-384h'] = array(
+    'uri' => 'rws-384h-uceap-reciprocity.pantheonsite.io',
+    'db-url' => 'mysql://pantheon:2f8ed9ac2f0e463d986dd329f14ee84c@dbserver.rws-384h.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in:14808/pantheon',
     'db-allows-remote' => TRUE,
-    'remote-host' => 'appserver.pr-rws-327.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in',
-    'remote-user' => 'pr-rws-327.124a2a40-4bd3-440e-950c-e2302f8952bf',
-    'ssh-options' => '-p 2222 -o "AddressFamily inet"',
-    'path-aliases' => array(
-      '%files' => 'code/sites/default/files',
-      '%drush-script' => 'drush',
-     ),
-  );
-  $aliases['uceap-reciprocity.application'] = array(
-    'uri' => 'application-uceap-reciprocity.pantheonsite.io',
-    'db-url' => 'mysql://pantheon:577b98df252f4a1eb4da06dabeb25bd1@dbserver.application.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in:10998/pantheon',
-    'db-allows-remote' => TRUE,
-    'remote-host' => 'appserver.application.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in',
-    'remote-user' => 'application.124a2a40-4bd3-440e-950c-e2302f8952bf',
+    'remote-host' => 'appserver.rws-384h.124a2a40-4bd3-440e-950c-e2302f8952bf.drush.in',
+    'remote-user' => 'rws-384h.124a2a40-4bd3-440e-950c-e2302f8952bf',
     'ssh-options' => '-p 2222 -o "AddressFamily inet"',
     'path-aliases' => array(
       '%files' => 'code/sites/default/files',
